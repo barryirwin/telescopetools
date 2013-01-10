@@ -1,0 +1,74 @@
+README FILE
+These scripts generate Graphs for the top 40 udp ports in a collection of telescopes
+
+Manifest
+========
+config.inc
+genport.sh
+README
+runme.sh
+
+Instructions
+============
+Step1 : ensure config.inc is correct
+	define SCOPES
+	define Date ranges
+
+Step2 : run ./runme.sh
+	For each telescope extracs top UDP ports
+	XXX_topudp.csv
+	XXX_topudp.csv.stats
+
+Step3: run ./genport.sh
+	Creates the CSV files for use for each port
+
+Step 4: run ./makegraphs.sh
+	Builds the graphs
+
+Sample Run:
+-------------
+time ./runme.sh 
+Preparing for telescope155:
+   Counts:  U A .. done
+DEBUG: TUDP=1088556 TALL=7533389
+   Running Query ..OK
+telescope155 complete.
+Preparing for telescope19621:
+   Counts:  U A .. done
+DEBUG: TUDP=1251449 TALL=20042732
+   Running Query ..OK
+telescope19621 complete.
+Preparing for telescope19624:
+   Counts:  U A .. done
+DEBUG: TUDP=2534749 TALL=34112473
+   Running Query ..OK
+telescope19624 complete.
+Preparing for telescope146:
+   Counts:  U A .. done
+DEBUG: TUDP=1198424 TALL=4739851
+   Running Query ..OK
+telescope146 complete.
+
+real	7m32.165s
+user	0m0.320s
+sys	0m0.112s
+
+$  time ./genport.sh 
+Starting Top UDP ports for telescope155
+  Processing  5060   ok.
+  Processing  1434   ok.
+  ...
+  Processing  137   ok.
+  Processing  27130   ok.
+  Processing  30503   ok.
+Starting Top UDP ports for telescope19621
+  Processing  5060   ok.
+  ...
+  Processing  43781   ok.
+  Processing  23673   ok.
+  Processing  30759   ok.
+
+real	8m35.952s
+user	0m3.996s
+sys	0m1.420s
+

@@ -1,0 +1,59 @@
+README FILE
+These scripts generate Graphs for the top 40 ip ports in a collection of telescopes
+
+MANIFEST
+========
+config.inc
+genport.sh
+makegraphs.sh
+README
+runme.sh
+template.plt
+
+Instructions
+============
+Step1 : ensure config.inc is correct
+	define SCOPES
+	define Date ranges
+
+Step2 : run ./runme.sh
+	For each telescope extracs top ports by SYN and NOSYN
+	XXX_NOSYN.csv
+	XXX_NOSYN.csv.stats
+	XXX_SYN.csv
+	XXX_SYN.csv.stats
+
+Step3: run ./genport.sh
+	Creates the CSV files for use for each port
+
+Step 4: run ./makegraphs.sh
+	Builds the graphs
+
+Sample Run
+----------
+$ time ./runme.sh 
+Preparing for telescope155:
+   Counts:  T A .. done
+   Running Query ..SYN OK
+   Running Query ..NOSYN OK
+telescope155 complete.
+Preparing for telescope19621:
+   Counts:  T A .. done
+   Running Query ..SYN OK
+   Running Query ..NOSYN OK
+telescope19621 complete.
+Preparing for telescope19624:
+   Counts:  T A .. done
+   Running Query ..SYN OK
+   Running Query ..NOSYN OK
+telescope19624 complete.
+Preparing for telescope146:
+   Counts:  T A .. done
+   Running Query ..SYN OK
+   Running Query ..NOSYN OK
+telescope146 complete.
+
+real	14m39.755s
+user	0m0.372s
+sys	0m0.144s
+

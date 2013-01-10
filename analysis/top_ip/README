@@ -1,0 +1,44 @@
+## README
+
+Last updated: 10 Jan 2013
+
+Step 1: edit config.inc
+	Edit telescopes
+	Edit Dateranges
+Step 2: run runme.sh
+	will produce a pile of files in <scope>_top20ip_byA.csv etc..
+
+Step 3: run geniplist.sh
+	will build individual csv files by day fr each of the IPs in each telescope as in step 2
+
+Step 4: run makeipgraphs.sh
+	This will build graphs using gnuplot based on template.plt
+	Ranges will be fixed based on dates defined in the config
+
+Sample Run:"
+--------------
+Preparing for telescope155.. done
+	Processing byA..ok
+	Processing byB..ok
+	Processing byC..ok
+Preparing for telescope19621.. done
+	Processing byA..ok
+	Processing byB..ok
+	Processing byC..ok
+Preparing for telescope19624.. done
+	Processing byA..ok
+	Processing byB..ok
+	Processing byC..ok
+Preparing for telescope146.. done
+	Processing byA..ok
+	Processing byB..ok
+	Processing byC..ok
+Preparing for rutelescope2010.. done
+	Processing byA..ok
+	Processing byB..ok
+	Processing byC..ok
+
+real	48m4.232s
+user	0m0.544s
+sys	0m0.168s
+ 
