@@ -1,9 +1,12 @@
 #!/bin/bash
 
-fname=$1
-gname=$2
-title=$3
-
+telescope=$1
+month=$2
+fname=$3
+gname=$4
+title=$5
+cd ${telescope}/${month:0:4}/${month}
+pwd
 
 gnuplot <<- EOF
 	set terminal postscript eps enhanced color font 'Helvetica,10'

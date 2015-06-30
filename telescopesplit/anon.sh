@@ -1,4 +1,5 @@
 #!/bin/bash
+
 fname=$1
 dname=$2
 

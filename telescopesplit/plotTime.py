@@ -4,7 +4,8 @@ import dpkt, sys, time, math, subprocess
 
 telescope=sys.argv[1]
 month=sys.argv[2]
-os.chdir(telescope
+os.chdir(telescope+'/'+month[:4]+'/'+month)
+print os.getcwd()
 f=open(sys.argv[3])
 dname=sys.argv[4]
 pcap=dpkt.pcap.Reader(f)
